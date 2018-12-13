@@ -1,0 +1,38 @@
+body{
+    background-image: url("../images/black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.intro{
+    float: left;
+    padding: 100px 100px 100px 100px;
+    background: #fbf9f966;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.start-btn{
+    margin-left: 40%;
+}
+
+.start-btn input {
+    border: none;
+    background: rgb(8, 235, 106);
+    border-radius:12px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 3% 5%;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+p{
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;  
+}
