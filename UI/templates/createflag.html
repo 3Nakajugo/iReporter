@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Create Red-flag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/createflag.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <section class="red">
+        <div>
+            <a href="redflag.html"> <button id="back-btn">Back</button></a>
+            <!-- <input type="submit" id="submit-btn" value="Submit" onclick="conf()"> -->
+        </div>
+        <div class="form-redflag">
+            <form action="redflag.html">
+                <label>Description</label><br>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <label>Location</label><br>
+                <input type="text" placeholder="Longitude" required> <input type="text" placeholder="Latitude" required><br />
+                <label>Upload Video or Image</label><br>
+                <input type="file" placeholder="Choose Video or Image"><br />
+                <label>Date</label> <br>
+                <input type="Date" required> <br>
+
+
+                <select>
+                    <option value="incident">Select Incident Type</option>
+                    <option value="redflag">Redflag</option>
+                    <option value="intervention">Intervention</option>
+                </select>
+
+                <br>
+
+                <div>
+                    <input type="submit" id="submit-btn" value="Submit" onclick="conf()">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function conf() {
+            var con = confirm("Do you want to submit for sure?");
+        }
+    </script>
+</body>
+
+</html>
