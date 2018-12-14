@@ -50,11 +50,25 @@ label {
     margin-top: 3%;
   }
 
-  select{
+select{
     width: 52%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-left: 25%;
   }
-  
+#back-btn{
+    border : 2px solid #3C3E52;
+    background-color:rgba(8, 16, 90, 0.705);
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    transition-duration: 0.25s;
+    /* align-self: center; */
+    color: white;
+    margin-left: 40%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
