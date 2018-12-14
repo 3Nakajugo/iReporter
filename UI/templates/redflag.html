@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/redflag.css">
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <div class="menu">
+            <ul>
+                <li> <a href="redflag.html" class="menu-btn">Red-Flags</a></li>
+                <li> <a href="" class="menu-btn"> Interventions</a></li>
+                <li><a href="" class="menu-btn">Notifications</a></li>
+                <li><a href="login.html" class="menu-btn">Log Out</a></li>
+
+            </ul>
+
+        </div>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/avatar.jpg" alt=""></a>
+            <div class="profile-btn">
+                <a href="createflag.html"> <button id="edit-btn"> Create </button></a>
+            </div>
+
+        </div>
+
+        <div>
+            <h1> Red-Flags</h1>
+            <table class="table1" id="Red-Flags">
+                <tr>
+                    <th>Red-Flag</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                    <th>Location</th>
+                    <th>Button</th>
+                </tr>
+                <tr>
+                    <td>cheif justice recieves bribe of 20 million</td>
+                    <td>rejected</td>
+                    <td>1/08/2005</td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
+                        <a href="#"><input type="submit" name="btn-edit" id="edit-btn" class="btn" value="edit" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>cheif justice recieves bribe of 20 million</td>
+                    <td>rejected</td>
+                    <td>1/08/2005</td>
+                    <td></td>
+                    <td>
+                        <input type="submit" id="delete-btn" name="btn-delete" onclick="clickAlert()" class="btn" value="delete" />
+                        <a href="#"><input type="submit" name="btn-edit" id="edit-btn" class="btn" value="edit" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>cheif justice recieves bribe of 20 million</td>
+                    <td>solved</td>
+                    <td>1/08/2005</td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
+                        <a href="#"><input type="submit" name="btn-edit" class="btn" id="edit-btn" value="edit" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>cheif justice recieves bribe of 20 million</td>
+                    <td>solved</td>
+                    <td>1/08/2005</td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
+                        <a href="#"><input type="submit" name="btn-edit" class="btn" id="edit-btn" value="edit" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>cheif justice recieves bribe of 20 million</td>
+                    <td>solved</td>
+                    <td>1/08/2005</td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
+                        <a href="#"><input type="submit" name="btn-edit" class="btn" id="edit-btn" value="edit" /></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <script>
+        function clickAlert() {
+            window.alert("Are you sure?");
+        }
+    </script>
+</body>
+
+</html>

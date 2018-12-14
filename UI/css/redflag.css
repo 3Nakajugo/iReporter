@@ -1,0 +1,19 @@
+.btn{
+    border : 2px solid #3C3E52;
+    background-color:rgba(8, 16, 90, 0.87);
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 70px;
+    cursor: pointer;
+    font-size: 12px;
+    transition-duration: 0.25s;
+    align-self: center;
+    color: white;
+}
+#edit-btn:hover{
+    background-color: rgba(14, 201, 45, 0.596);
+}
+#delete-btn:hover{
+    background-color: rgba(168, 9, 9, 0.938);
+
+}
