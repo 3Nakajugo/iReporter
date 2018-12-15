@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/login.css">
+
 </head>
 
 <body>
@@ -17,25 +18,26 @@
             <div class="heading">
                 <p>Please Log In Here</p>
             </div>
-            <form action="profile.html" autocomplete="on" class="login-form">
+            <form name="login-form" autocomplete="on" class="login-form">
                 <div class="login-input">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" id="username" placeholder="Username" required>
                 </div>
                 <div class="login-input">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" id="password" placeholder="Password" required>
                 </div>
                 <div class="login-input">
-                    <input type="submit" name="" value="Log In">
+                    <input type="button" onclick="validate()" name="" value="Log In">
                 </div>
-                <p><small><a href="signup.html">Register for an account</a></small></p>
+                
+                <p><small><a href="
+                        signup.html">Register for an account</a></small></p>
             </form>
+           
         </div>
 
-
     </section>
-
-
-    <script src="" async defer></script>
+    <script src="javas/login.js"></script>
+    
 </body>
 
 </html>
