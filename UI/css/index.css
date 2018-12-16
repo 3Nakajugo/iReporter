@@ -9,6 +9,7 @@ body{
     background: #fbf9f966;
     margin-top: 2%;
     margin-left: 1%;
+    display: block;
 }
 
 .start-btn{
@@ -40,3 +41,23 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;  
 }
+
+@media only screen and (max-width:900px){
+    intro {
+        /* float: left; */
+        padding: 40px 100px 100px 100px;
+        /* background: #fbf9f966; */
+        /* margin-top: 2%; */
+        /* margin-left: 1%; */
+    }
+    p{
+        text-align: center;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;  
+    }
+
+
+}
+
+

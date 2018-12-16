@@ -21,6 +21,20 @@ intervention records .
 event of a false claim) or resolved (in the event that the claim has been investigated and
 resolved) .
 
+## Login Credentials
+
+ADMIN
+
+* Password: admin
+
+* username: admin
+
+USER
+
+* Password: user
+
+* username: user
+
 ## Demo link
 
 ### Author
