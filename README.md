@@ -21,6 +21,29 @@ intervention records .
 event of a false claim) or resolved (in the event that the claim has been investigated and
 resolved) .
 
+## Technologies
+
+* html
+* css
+
+## Login Credentials
+
+ADMIN
+
+* Password: admin
+
+* username: admin
+
+USER
+
+* Password: user
+
+* username: user
+
+## pivotal tracker link
+
+https://www.pivotaltracker.com/n/projects/2231716
+
 ## Demo link
 
 ### Author
