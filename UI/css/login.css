@@ -3,7 +3,6 @@ body{
 }
 .form1{
     float: left;
-    /* padding: 15px; */
     padding: 35px 100px 50px 100px;
     background: #fbf9f966;
     margin-top: 9%;
@@ -55,4 +54,41 @@ a{
     color: #1d1d1d;
     font-size: 20px;
     text-align: center;
+}
+
+@media screen and (max-width:300px){
+    .heading p{
+        color: #f0e8e8;
+        font-size: 10px;
+        text-align: center;
+        
+    }
+    .form1{
+        float: left;
+        padding: 35px 100px 50px 100px;
+        background: #0c0101d2;
+        margin-top: 35%;
+        /* margin-left: 10%; */
+    
+    }
+
+}
+
+
+@media screen and (max-width:600px){
+    .heading p{
+        color: #1d1d1d;
+        font-size: 18px;
+        text-align: center;
+        
+    }
+    .form1{
+        float: left;
+        padding: 35px 100px 50px 100px;
+        background: #fbf9f92c;
+        margin-top: 35%;
+        margin-left: 10%;
+    
+    }
+
 }
