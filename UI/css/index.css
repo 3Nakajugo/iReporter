@@ -44,18 +44,61 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;  
 }
+@media only screen and (max-width:400px){
+    .intro{
+        width: 60%;
+        height:100%;
+        margin-left: 90px;
+        padding: 100% 0 30%;
+        margin-bottom: 100%;
+        background: #fbf9f93b;
+        overflow: hidden;
+    }
+    p{
+        text-align: auto;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff; 
 
+    }
+   
+    .start-btn{
+        margin-left: 25%;
+    }
+}
 @media only screen and (max-width:600px){
     .intro{
-        float: left;
-        width: 80%;
-        height: 50%;
-        padding: 100px 100px 100px 100px;
-        background: #fbf9f966;
-        margin-top: 2%;
-        margin-left: auto;
+        width: 60%;
+        height:100%;
+        margin-left: 90px;
+        padding: 100% 0 30%;
+        margin-bottom: 100%;
+        background: #fbf9f93a;
+        overflow: hidden;
     }
+    p{
+        text-align: auto;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff; 
 
+    }
+   
+    .start-btn{
+        margin-left: 35%;
+    }
 }
+@media only screen and (max-width:1024px){
+    .intro{
+        width: 80%;
+        height:auto;
+        margin-left: 90px;
+        padding: 10% 0 10%;
+        margin-bottom: 5%;
+        overflow: hidden;
+    }
+}
+
+
 
 
