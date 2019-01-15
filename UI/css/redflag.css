@@ -17,3 +17,17 @@
     background-color: rgba(168, 9, 9, 0.938);
 
 }
+@media screen and (max-width:600px){
+    .btn{
+        border : 1px solid #3C3E52;
+        background-color:rgba(8, 16, 90, 0.87);
+        padding: 8px 10px;
+        border-radius: 4px;
+        width: 60px;
+        cursor: pointer;
+        font-size: 10px;
+        transition-duration: 0.25s;
+        align-self: center;
+        color: white;
+    }
+}
