@@ -1,18 +1,18 @@
 
 body{
-    background-image: url("../images/back.png");
-    background-repeat: no-repeat;
-    background-size: cover; 
+    background-color: #eeeeeea4;
 }
 .intro{
     float: left;
     width: 80%;
     height: 50%;
     padding: 100px 100px 100px 100px;
-    background: #fbf9f966;
+    background: #fbf9f9;
     margin-top: 2%;
     margin-left: 2%;
-    margin-bottom: 3%
+    margin-bottom: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+    border-radius: 4px;
 }
 
 .start-btn{
@@ -36,68 +36,101 @@ h1{
     text-align: center;
     font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
+    color:red;
 }
 p{
     text-align: center;
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;  
+    color: rgb(3, 3, 3);  
 }
-@media only screen and (max-width:400px){
-    .intro{
-        width: 60%;
-        height:100%;
-        margin-left: 90px;
-        padding: 100% 0 30%;
-        margin-bottom: 100%;
-        background: #fbf9f93b;
-        overflow: hidden;
+@media only screen and (max-width:600px){
+    body{
+        background-color: #464444d3;
     }
+    h1{
+        text-align: center;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:rgba(151, 10, 10, 0.705);
+    }
+    .intro{
+        float: left;
+        width: 60%;
+        height: 80%;
+        padding: 100px 100px 100px 100px;
+        background: #fbf9f9;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+        border-radius: 4px;
+    }
+    
     p{
         text-align: auto;
         font-size: 15px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #fff; 
+        color:black; 
 
     }
    
     .start-btn{
-        margin-left: 25%;
+        margin-left: 1%;
+    }
+    .start-btn input {
+        border: 1px solid black;
+        background: rgb(8, 235, 106);
+        border-radius:8px;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 3% 5%;
     }
 }
-@media only screen and (max-width:600px){
-    .intro{
-        width: 60%;
-        height:100%;
-        margin-left: 90px;
-        padding: 100% 0 30%;
-        margin-bottom: 100%;
-        background: #fbf9f93a;
-        overflow: hidden;
+
+@media only screen and (min-width:600px ) and (max-width:950px) {
+    h1{
+        text-align: center;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:rgba(151, 10, 10, 0.884);
     }
+    .intro{
+        /* float: right; */
+        width: 60%;
+        height: 80%;
+        padding: 100px 100px 100px 100px;
+        background: #fbf9f9;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-bottom: 2%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+        border-radius: 4px;
+    }
+    
     p{
         text-align: auto;
-        font-size: 20px;
+        font-size: 17px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #fff; 
+        color:black; 
 
     }
    
     .start-btn{
-        margin-left: 35%;
+        margin-left: 20%;
+    }
+    .start-btn input {
+        border: 1px solid black;
+        background: rgb(8, 235, 106);
+        border-radius:8px;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 3% 5%;
     }
 }
-@media only screen and (max-width:1024px){
-    .intro{
-        width: 80%;
-        height:auto;
-        margin-left: 90px;
-        padding: 10% 0 10%;
-        margin-bottom: 5%;
-        overflow: hidden;
-    }
-}
+
 
 
 
