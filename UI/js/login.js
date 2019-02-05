@@ -30,6 +30,7 @@ function login() {
         })
 
 }
+
 function setCookie(token, cvalue, exdays) {
     var date = new Date();
     date.setTime(date.getTime() + (exdays * 24 * 60 * 60 * 1000));
