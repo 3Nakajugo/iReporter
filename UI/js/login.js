@@ -6,7 +6,7 @@ function login() {
 
     console.log(user_credentials);
 
-    fetch('http://127.0.0.1:5000/api/v2/auth/login', {
+    fetch('https://appireporter2.herokuapp.com/api/v2/auth/login', {
         method: 'POST',
         body: JSON.stringify(user_credentials),
         headers: {
@@ -24,6 +24,9 @@ function login() {
                 window.location.href = "profile.html"
             }
             else if (response.status === 400) {
+                document.getElementById('error').innerHTML = `${response_data.message}`
+            }
+            else if (response.status === 401) {
                 document.getElementById('error').innerHTML = `${response_data.message}`
             }
 
