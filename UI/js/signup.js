@@ -13,7 +13,7 @@ function signup() {
     }
     else {
         console.log(user)
-        fetch('https://appireporter2.herokuapp.com/api/v2/auth/signup', {
+        fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
