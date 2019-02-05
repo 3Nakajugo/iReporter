@@ -13,7 +13,7 @@ function signup() {
     }
     else {
         console.log(user)
-        fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
+        fetch('https://appireporter2.herokuapp.com/api/v2/auth/signup', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
@@ -29,7 +29,6 @@ function signup() {
                 }
                 else if (response_data.status === 201) {
                     document.getElementById('error').style.display = 'none'
-                    // document.getElementById('error').innerHTML = `${response_data.message}`
                     window.alert('user was created');
                     window.location.href = 'login.html';
                 }
