@@ -12,7 +12,6 @@ function signup() {
         document.getElementById('error').innerHTML = 'password does not match'
     }
     else {
-        document.getElementById('error').style.display = 'none'
         console.log(user)
         fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
             method: 'POST',
@@ -29,6 +28,7 @@ function signup() {
                     document.getElementById('error').innerHTML = `${response_data.message}`
                 }
                 else if (response_data.status === 201) {
+                    document.getElementById('error').style.display = 'none'
                     // document.getElementById('error').innerHTML = `${response_data.message}`
                     window.alert('user was created');
                     window.location.href = 'login.html';
