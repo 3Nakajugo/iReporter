@@ -6,7 +6,7 @@ function login() {
 
     console.log(user_credentials);
 
-    fetch('http://127.0.0.1:5000/api/v2/auth/login', {
+    fetch('https://appireporter2.herokuapp.com/api/v2/auth/login', {
         method: 'POST',
         body: JSON.stringify(user_credentials),
         headers: {
