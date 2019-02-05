@@ -25,6 +25,9 @@
                 <p>Please Log In Here</p>
             </div>
             <form name="login-form" autocomplete="on" class="login-form">
+                <div class="heading">
+                    <p id="error"></p>
+                </div>
                 <div class="login-input">
                     <input type="text" id="username" placeholder="Username" required>
                 </div>
@@ -32,7 +35,7 @@
                     <input type="password" id="password" placeholder="Password" required>
                 </div>
                 <div class="login-input">
-                    <input type="button" onclick="validate()" name="" value="Log In">
+                    <input type="button" onclick="login()" name="" value="Log In">
                 </div>
 
                 <p><small><a href="
@@ -43,7 +46,7 @@
 
     </section>
 
-    <script src="../javas/login.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 
