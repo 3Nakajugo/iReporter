@@ -1,4 +1,4 @@
-auth = localStorage.getItem("token")
+let auth = localStorage.getItem("token")
 console.log(auth)
 redflags();
 function redflags() {
@@ -11,10 +11,10 @@ function redflags() {
     })
         .then((response) => response.json())
         .then((response) => {
-            var response_data = response;
+            let response_data = response;
             console.log(response_data)
             if (response_data.status === 200) {
-                var data = response_data["data"]
+                let data = response_data["data"]
                 console.log(data);
                 response_data["data"].forEach(redflag => {
                     document.getElementById('tabledata').innerHTML += ` <tr>
@@ -38,4 +38,4 @@ function redflags() {
 
 
 }
-
+// function editStatus()

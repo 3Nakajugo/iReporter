@@ -1,5 +1,5 @@
 function signup() {
-    var user = {
+    let user = {
         first_name: document.getElementById("firstname").value,
         last_name: document.getElementById("lastname").value,
         telephone: document.getElementById("telephone").value,
@@ -21,7 +21,7 @@ function signup() {
         })
             .then((response) => response.json())
             .then((response) => {
-                var response_data = response;
+                let response_data = response;
                 console.log(response_data)
                 if (response_data.status === 400) {
                     document.getElementById('error').innerHTML = `${response_data.message}`
