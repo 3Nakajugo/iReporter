@@ -10,18 +10,17 @@ function login() {
         method: 'POST',
         body: JSON.stringify(user_credentials),
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         }
     })
         .then((response) => response.json())
         .then((response) => {
             console.log(response.status)
-            let response_data = response;
-            if (response_data.status === 200) {
+            if (response.status === 200) {
                 document.getElementById('error').style.display = 'none';
                 window.alert('succesfully logged in');
-                console.log(response_data.token)
-                localStorage.setItem("token", response_data.token);
+                console.log(response.token)
+                localStorage.setItem("token", response.token);
                 if (document.getElementById("username").value === "admin") {
                     document.getElementById('error').style.display = 'none';
                     window.location.href = 'admin.html';
@@ -33,10 +32,10 @@ function login() {
 
             }
             else if (response.status === 400) {
-                document.getElementById('error').innerHTML = `${response_data.message}`
+                document.getElementById('error').innerHTML = `${response.message}`
             }
             else if (response.status === 401) {
-                document.getElementById('error').innerHTML = `${response_data.message}`
+                document.getElementById('error').innerHTML = `${response.message}`
             }
 
         });

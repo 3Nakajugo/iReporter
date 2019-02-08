@@ -21,12 +21,11 @@ function signup() {
         })
             .then((response) => response.json())
             .then((response) => {
-                let response_data = response;
-                console.log(response_data)
-                if (response_data.status === 400) {
-                    document.getElementById('error').innerHTML = `${response_data.message}`
+                console.log(response)
+                if (response.status === 400) {
+                    document.getElementById('error').innerHTML = `${response.message}`
                 }
-                else if (response_data.status === 201) {
+                else if (response.status === 201) {
                     document.getElementById('error').style.display = 'none';
                     window.alert('user was created');
                     window.location.href = 'login.html';
