@@ -25,6 +25,8 @@ resolved) .
 
 * html
 * css
+* ES6
+
 
 ## Login Credentials
 
@@ -32,13 +34,7 @@ ADMIN
 
 * Password: admin
 
-* username: admin
-
-USER
-
-* Password: user
-
-* username: user
+* username: admin123
 
 ## pivotal tracker link
 
