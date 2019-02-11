@@ -20,6 +20,19 @@ function createIncident() {
                 'Authorization': `Bearer ${auth}`
             }
         })
+        .then((response)=>response.json())
+        .then((response)=>{
+            if (response.status === 201) {
+                document.getElementById("error").style.display = 'none';
+                window.alert(`${response.message}`)
+            }
+            else if (response.status === 400) {
+                document.getElementById("error").innerHTML = `${response.message}`
+            }
+            else if (response.status === 401) {
+                document.getElementById("error").innerHTML = `${response.message}`
+            }
+        })
 
     }
     else if (incidentType === 'intervention') {
@@ -53,3 +66,8 @@ function createIncident() {
 
 
 }
+
+// function file(){
+//     let  file = document.getElementById('file').value
+
+// }
