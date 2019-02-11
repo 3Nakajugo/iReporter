@@ -37,7 +37,7 @@ function redflags() {
                 }
 
             }
-            else if (response_data.status === 401) {
+            else if (response.status === 401) {
                 document.getElementById('Red-Flags').innerHTML = `${response.message}`
             }
 
