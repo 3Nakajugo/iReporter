@@ -1,8 +1,8 @@
 let auth = localStorage.getItem("token")
 console.log(auth)
-redflags();
+redflags();// function call
 function redflags() {
-    fetch('http://127.0.0.1:5000/api/v2/redflags', {
+    fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function redflags() {
 
             }
             else if (response_data.status === 401) {
-                document.getElementById('Red-Flags').innerHTML = `${response.message}`
+                document.getElementById('Red-Flags').innerHTML = `<p>${response.message}</p>`
             }
 
         });
