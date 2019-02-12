@@ -27,6 +27,7 @@ function redflags() {
                         <td>${redflag.status}</td>
                         <td>${redflag.file}</td>
                         <td>${redflag.comment}</td>
+                        <td><input type="submit" name="btn-edit" id="edit-btn" onclick="edit(${redflag.incident_id})" class="btn" value="edit status"/></td>
                         </tr>
                         `
                     });
@@ -42,6 +43,53 @@ function redflags() {
             }
 
         });
+
+
+}
+
+function edit(incident_id) {
+    console.log(incident_id);
+    let modal = document.getElementById('myModal');
+    let btn = document.getElementById("edit-btn");
+    let close = document.getElementsByClassName("close")[0];
+    let url = `https://appireporter2.herokuapp.com/api/v2/redflags/${incident_id}/status`;
+    modal.style.display = "block";
+
+    document.getElementById('status-form').addEventListener('submit', change)
+    function change(e) {
+        e.preventDefault();
+        let new_status = document.getElementById('select').value;
+        let status = {
+            status: new_status
+        }
+        fetch(url, {
+            method: 'PATCH',
+            body: JSON.stringify(status),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${auth}`
+            }
+        })
+            .then((response) => response.json())
+            .then(response => {
+                if (response.status === 200) {
+                    document.getElementById('error').style.display = 'none'
+                    window.alert(response.message);
+                    modal.style.display = "none";
+                }
+                if (response.status === 400) {
+                    document.getElementById('error').innerHTML = `${response.message}`
+                }
+                if (response.status === 401) {
+                    document.getElementsByClassName('modal-content').innerHTML = `${response.message}`
+
+                }
+
+            })
+    }
+    close.onclick = function () {
+        modal.style.display = "none";
+    }
 
 
 }
