@@ -12,7 +12,7 @@ function createIncident() {
     console.log(incident);
     if (incidentType === 'redflag') {
         //creates redflag
-        fetch('http://127.0.0.1:5000/api/v2/reflags', {
+        fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
             method: 'POST',
             body: JSON.stringify(incident),
             headers: {
@@ -20,11 +20,24 @@ function createIncident() {
                 'Authorization': `Bearer ${auth}`
             }
         })
+        .then((response)=>response.json())
+        .then((response)=>{
+            if (response.status === 201) {
+                document.getElementById("error").style.display = 'none';
+                window.alert(`${response.message}`)
+            }
+            else if (response.status === 400) {
+                document.getElementById("error").innerHTML = `${response.message}`
+            }
+            else if (response.status === 401) {
+                document.getElementById("error").innerHTML = `${response.message}`
+            }
+        })
 
     }
     else if (incidentType === 'intervention') {
         //creates intervention
-        fetch('http://127.0.0.1:5000/api/v2/interventions', {
+        fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
             method: 'POST',
             body: JSON.stringify(incident),
             headers: {
@@ -53,3 +66,8 @@ function createIncident() {
 
 
 }
+
+// function file(){
+//     let  file = document.getElementById('file').value
+
+// }

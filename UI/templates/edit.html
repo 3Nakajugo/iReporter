@@ -11,36 +11,44 @@
 
 <body>
     <section class="red">
-        <div>
-            <a href="redflag.html"> <button id="back-btn">Back</button></a>
-        </div>
-        <div class="form-redflag">
-            <form action="redflag.html">
-                <label>Description</label><br>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="menu">
+            <ul class="topnav" id="myTopnav">
+                <li> <a href="profile.html" id="active">Profile</a></li>
+                <li> <a href="redflag.html">Red-Flags</a></li>
+                <li> <a href="intervention.html"> Interventions</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="../index.html">Log Out</a></li>
+            </ul>
+            <div class="form-redflag">
+                <form action="redflag.html">
+                    <br>
+                    <div>
+                        <p id="error"></p>
+                    </div>
+                    <select id="select">
+                        <option value="incident">Select Incident Type</option>
+                        <option value="redflag">Redflag</option>
+                        <option value="intervention">Intervention</option>
+                    </select>
+                    <label>Comment</label><br>
+                    <textarea name="" id="comment" cols="30" rows="10"></textarea>
 
-                <label>Location</label><br>
-                <input type="text" placeholder="Longitude" required> <input type="text" placeholder="Latitude" required><br />
-                <label>Upload Video or Image</label><br>
-                <input type="file" placeholder="Choose Video or Image"><br />
-                <label>Date</label> <br>
-                <input type="Date" required> <br>
-
-
-                <select>
-                    <option value="incident">Select Incident Type</option>
-                    <option value="redflag">Redflag</option>
-                    <option value="intervention">Intervention</option>
-                </select>
-
-                <br>
-
-                <div>
-                    <input type="submit" id="submit-btn" value="Save">
-                </div>
-            </form>
-        </div>
+                    <label>Location</label><br>
+                    <input type="text" id="location" placeholder="cordinates" required> <br />
+                    <label>Upload Video or Image</label><br>
+                    <input type="file" id="file" placeholder="Choose Video or Image"><br />
+                    <div>
+                        <input type="button" onclick="createIncident()" id="submit-btn" value="Submit">
+                    </div>
+                </form>
+            </div>
     </section>
+
+    <script src="../js//create.js">
+        // function conf() {
+        //     var con = confirm("Do you want to submit for sure?");
+        // }
+    </script>
 </body>
 
 </html>
