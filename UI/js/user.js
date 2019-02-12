@@ -17,18 +17,19 @@ function redflags() {
                     let data = response["data"]
                     console.log(data);
                     response["data"].forEach(redflag => {
-                        document.getElementById('tabledata').innerHTML += ` <tr>
-                        <td>${redflag.incident_id}</td>
-                        <td>${redflag.incident_type}</td>
-                        <td>${redflag.date}</td>
-                        <td>${redflag.createdby}</td>
-                        <td>${redflag.location}</td>
-                        <td>${redflag.status}</td>
-                        <td>${redflag.file}</td>
-                        <td>${redflag.comment}</td>
-                        <td><input type="submit" name="btn-edit" id="edit-btn" onclick="edit(${redflag.incident_id})" class="btn" value="edit status"/></td> 
-                        </tr>
-                        `
+                        document.getElementById('tabledata').innerHTML += `<tr>
+                            <td>${redflag.incident_id}</td>
+                            <td>${redflag.date}</td>
+                            <td>${redflag.location}</td>
+                            <td>${redflag.status}</td>
+                            <td>${redflag.file}</td>
+                            <td>${redflag.comment}</td>
+                            <td>
+                                <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
+                                <a href="edit.html"><input type="submit" name="btn-edit" id="edit-btn" class="btn" value="edit" /></a>
+                            </td>
+                            </tr>
+                            `
                     });
 
                 }
@@ -41,18 +42,9 @@ function redflags() {
                 document.getElementById('Red-Flags').innerHTML = `<p>${response.message}</p>`
             }
 
-        });
+        })
+        .catch(error => console.log(error));
 
 
 }
-
-function edit(incident_id) {
-    console.log(incident_id);
-    let modal = document.getElementById('myModal');
-    let btn = document.getElementById("edit-btn");
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-
-}
+// function editStatus()

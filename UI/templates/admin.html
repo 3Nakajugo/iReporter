@@ -31,6 +31,7 @@
                     <th>status</th>
                     <th>File</th>
                     <th>Comment</th>
+                    <th>Button</th>
                 </tr>
                 <tbody id="tabledata">
 
@@ -98,11 +99,27 @@
                     <td>Emma</td>
                 </tr> -->
             </table>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form>
+                        <input list="status" name="" placeholder="draft">
+                        <datalist id="status">
+                            <option value="Rejected">
+                            <option value="Resolved">
+                            <option value="Under Investigation">
+                        </datalist>
+                        <input type="submit" id="save-btn" onclick="" class="btn" value="save" />
+                    </form>
+
+                </div>
+
+            </div>
         </div>
     </section>
 
 
-    <script src="../js/get_redflags.js" ></script>
+    <script src="../js/get_redflags.js"></script>
 </body>
 
 </html>

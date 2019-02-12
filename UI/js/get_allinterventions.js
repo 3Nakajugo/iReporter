@@ -2,7 +2,7 @@ let auth = localStorage.getItem("token")
 console.log(auth)
 redflags();
 function redflags() {
-    fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
+    fetch('http://127.0.0.1:5000/api/v2/interventions', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -27,6 +27,7 @@ function redflags() {
                         <td>${redflag.status}</td>
                         <td>${redflag.file}</td>
                         <td>${redflag.comment}</td>
+                        <td><input type="submit" name="btn-edit" id="edit-btn" class="btn" value="edit status"/></td>
                         </tr>
                         `
                     });
