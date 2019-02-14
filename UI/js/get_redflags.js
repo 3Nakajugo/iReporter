@@ -2,7 +2,7 @@ let auth = localStorage.getItem("token")
 console.log(auth)
 redflags();// function call
 function redflags() {
-    fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
+    fetch('http://127.0.0.1:5000/api/v2/redflags', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,8 @@ function redflags() {
                 document.getElementById('Red-Flags').innerHTML = `<p>${response.message}</p>`
             }
 
-        });
+        })
+        .catch (error => console.log(error));
 
 
 }
@@ -51,7 +52,7 @@ function edit(incident_id) {
     let modal = document.getElementById('myModal');
     let btn = document.getElementById("edit-btn");
     let close = document.getElementsByClassName("close")[0];
-    let url = `https://appireporter2.herokuapp.com/api/v2/redflags/${incident_id}/status`;
+    let url = `http://127.0.0.1:5000/api/v2/redflags/${incident_id}/status`;
     modal.style.display = "block";
 
     document.getElementById('status-form').addEventListener('submit', change)
@@ -72,13 +73,14 @@ function edit(incident_id) {
             .then((response) => response.json())
             .then(response => {
                 if (response.status === 200) {
-                    document.getElementById('error').style.display = 'none'
+                    document.getElementById('error').style.display = 'none';
                     modal.style.display = "none";
+                    window.location.reload('../templates/admin.html')
                 }
-                if (response.status === 400) {
+                else if (response.status === 400) {
                     document.getElementById('error').innerHTML = `${response.message}`
                 }
-                if (response.status === 401) {
+                else if (response.status === 401) {
                     document.getElementsByClassName('modal-content').innerHTML = `${response.message}`
 
                 }

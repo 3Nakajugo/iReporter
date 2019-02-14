@@ -12,7 +12,7 @@ function createIncident() {
     console.log(incident);
     if (incidentType === 'redflag') {
         //creates redflag
-        fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
+        fetch('http://127.0.0.1:5000/api/v2/redflags', {
             method: 'POST',
             body: JSON.stringify(incident),
             headers: {
@@ -37,7 +37,7 @@ function createIncident() {
     }
     else if (incidentType === 'intervention') {
         //creates intervention
-        fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
+        fetch('http://127.0.0.1:5000/api/v2/interventions', {
             method: 'POST',
             body: JSON.stringify(incident),
             headers: {

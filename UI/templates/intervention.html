@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>Interventions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/redflag.css">
 </head>
 
@@ -22,76 +21,30 @@
             </ul>
 
         </div>
-        <div class="profile">
-            <a href="profile.html"><img src="../images/avatar.jpg" alt=""></a>
-            <div class="profile-btn">
-                <a href="createflag.html"> <button id="edit-btn"> Create </button></a>
-            </div>
-
+        <div>
+            <p id="message"></p>
         </div>
 
         <div>
             <h1>Interventions</h1>
             <table class="table1" id="Red-Flags">
                 <tr>
-                    <th>id</th>
+
                     <th>Date</th>
-                    <th>Location</th>
                     <th>status</th>
-                    <th>File</th>
                     <th>Comment</th>
                     <th>Button</th>
                 </tr>
-                <tbody id="tabledata"> 
-                    
-
+                <tbody id="tabledata">
                 </tbody>
-                <!-- <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>solved</td>
-                    <td>1/08/2005</td>
-                    <td>
-                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
-                        <a href="edit.html"><input type="submit" name="btn-edit" id="edit-btn" class="btn" value="edit" /></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>rejected</td>
-                    <td>1/08/2005</td>
-                    <td>
-                        <input type="submit" id="delete-btn" name="btn-delete" onclick="clickAlert()" class="btn" value="delete" />
-                        <a href="edit.html"><input type="submit" name="btn-edit" id="edit-btn" class="btn" value="edit" /></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>solved</td>
-                    <td>1/08/2005</td>
-                    <td>
-                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
-                        <a href="edit.html"><input type="submit" name="btn-edit" class="btn" id="edit-btn" value="edit" /></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>draft</td>
-                    <td>1/08/2005</td>
-                    <td>
-                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
-                        <a href="edit.html"><input type="submit" name="btn-edit" class="btn" id="edit-btn" value="edit" /></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>solved</td>
-                    <td>1/08/2005</td>
-                    <td>
-                        <input type="submit" name="btn-delete" id="delete-btn" onclick="clickAlert()" class="btn" value="delete" />
-                        <a href="edit.html"><input type="submit" name="btn-edit" class="btn" id="edit-btn" value="edit" /></a>
-                    </td>
-                </tr> -->
             </table>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="results"></div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -101,7 +54,8 @@
             window.alert("Are you sure?");
         }
     </script>
-    <script src="../js/user.js"></script>
+    <script src="../js/user_inter.js"></script>
+    <script src="../js/editint.js"></script>
 </body>
 
 </html>

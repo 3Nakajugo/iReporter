@@ -2,7 +2,7 @@ let auth = localStorage.getItem("token")
 console.log(auth)
 redflags();
 function redflags() {
-    fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
+    fetch('http://127.0.0.1:5000/api/v2/interventions', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ function redflags() {
                         <td>${redflag.status}</td>
                         <td>${redflag.file}</td>
                         <td>${redflag.comment}</td>
-                        <td><input type="submit" name="btn-edit" id="edit-btn" onclick="edit(${redflag.incident_id})" class="btn" value="edit status"/></td>
+                        <td><input type="submit" id="edit-btn" onclick="edit(${redflag.incident_id})" class="btn" value="edit status"/></td>
                         </tr>
                         `
                     });
@@ -52,7 +52,7 @@ function edit(incident_id) {
     let modal = document.getElementById('myModal');
     let btn = document.getElementById("edit-btn");
     let close = document.getElementsByClassName("close")[0];
-    let url = `https://appireporter2.herokuapp.com/api/v2/redflags/${incident_id}/status`;
+    let url = `http://127.0.0.1:5000/api/v2/interventions/${incident_id}/status`;
     modal.style.display = "block";
 
     document.getElementById('status-form').addEventListener('submit', change)
@@ -74,14 +74,14 @@ function edit(incident_id) {
             .then(response => {
                 if (response.status === 200) {
                     document.getElementById('error').style.display = 'none'
-                    window.alert(response.message);
                     modal.style.display = "none";
+                    window.location.reload('../templates/all_interventions.html')
                 }
-                if (response.status === 400) {
+                else if (response.status === 400) {
                     document.getElementById('error').innerHTML = `${response.message}`
                 }
-                if (response.status === 401) {
-                    document.getElementsByClassName('modal-content').innerHTML = `${response.message}`
+                else if (response.status === 401) {
+                    document.getElementsByClassName('error').innerHTML = `${response.message}`
 
                 }
 
