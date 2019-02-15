@@ -40,9 +40,11 @@ function redflags() {
             }
             else if (response.status === 401) {
                 document.getElementById('Red-Flags').innerHTML = `${response.message}`
+                window.location.href = 'login.html';
             }
 
-        });
+        })
+        .catch(error => console.log(error));
 
 
 }

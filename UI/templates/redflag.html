@@ -6,6 +6,8 @@
     <title>Red-Flags</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/redflag.css">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -16,16 +18,16 @@
                 <li> <a href="redflag.html" id="active">Red-Flags</a></li>
                 <li> <a href="intervention.html"> Interventions</a></li>
                 <li><a href="notifications.html">Notifications</a></li>
-                <li><a href="login.html">Log Out</a></li>
+                <li><a onclick="logout()">Log Out</a></li>
 
             </ul>
 
         </div>
         <div>
-                <div>
-                    <p id="message"></p>
-                </div>
-            
+            <div>
+                <p id="message"></p>
+            </div>
+
 
             <h1> Red-Flags</h1>
             <table class="table1" id="Red-Flags">
@@ -50,12 +52,10 @@
 
 
     <script>
-        function clickAlert() {
-            window.alert("Are you sure?");
-        }
     </script>
     <script src="../js/user_redflags.js"></script>
-    <script src="../js/edit_redflag.js" ></script>
+    <script src="../js/edit_redflag.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 
 </html>

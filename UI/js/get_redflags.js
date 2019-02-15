@@ -39,10 +39,11 @@ function redflags() {
             }
             else if (response.status === 401) {
                 document.getElementById('Red-Flags').innerHTML = `<p>${response.message}</p>`
+                window.location.href = 'login.html';
             }
 
         })
-        .catch (error => console.log(error));
+         
 
 
 }

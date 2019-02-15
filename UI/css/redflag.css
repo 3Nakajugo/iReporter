@@ -10,6 +10,10 @@
     align-self: center;
     color: white;
 }
+#single-record{
+    font-size: 20px;
+    margin-left: 40%;
+}
 #edit-btn:hover{
     background-color: rgba(14, 201, 45, 0.596);
 }

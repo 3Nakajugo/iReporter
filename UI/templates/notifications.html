@@ -6,6 +6,8 @@
     <title>Notifications</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/profile.css">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -13,10 +15,10 @@
         <div class="menu">
             <ul class="topnav" id="myTopnav">
                 <li> <a href="profile.html">Profile</a></li>
-                <li> <a href="redflag.html" >Red-Flags</a></li>
-                <li> <a href="intervention.html" > Interventions</a></li>
-                <li><a href="notifications.html" id="active" >Notifications</a></li>
-                <li><a href="../index.html" >Log Out</a></li>
+                <li> <a href="redflag.html">Red-Flags</a></li>
+                <li> <a href="intervention.html"> Interventions</a></li>
+                <li><a href="notifications.html" id="active">Notifications</a></li>
+                <li><a onclick="logout()">Log Out</a></li>
 
             </ul>
 
@@ -47,7 +49,7 @@
     </section>
 
 
-    <script src="" async defer></script>
+    <script src="../js/logout.js"></script>
 </body>
 
 </html>

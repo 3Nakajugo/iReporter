@@ -5,8 +5,12 @@
     <meta charset="utf-8">
     <title>Create Red-flag</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/createflag.css">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -17,7 +21,7 @@
                 <li> <a href="redflag.html">Red-Flags</a></li>
                 <li> <a href="intervention.html"> Interventions</a></li>
                 <li><a href="notifications.html">Notifications</a></li>
-                <li><a href="../index.html">Log Out</a></li>
+                <li><a onclick="logout()">Log Out</a></li>
             </ul>
             <div class="form-redflag">
                 <form action="redflag.html">
@@ -37,6 +41,7 @@
                     <input type="text" id="location" placeholder="cordinates" required> <br />
                     <label>Upload Image</label><br>
                     <input type="file" id="file" placeholder="Choose Video or Image"><br />
+                    <div id="mapid"></div>
                     <div>
                         <input type="button" onclick="createIncident()" id="submit-btn" value="Submit">
                     </div>
@@ -44,8 +49,9 @@
             </div>
     </section>
 
-    <script src="../js//create.js">
-    </script>
+    <script src="../js/create.js">    </script>
+    <script src="../js/logout.js"></script>
+
 </body>
 
 </html>

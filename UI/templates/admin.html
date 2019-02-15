@@ -6,6 +6,8 @@
     <title>Admin Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/admin.css ">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
             <ul class="topnav" id="myTopnav">
                 <li> <a href="admin.html" id="active" class="menu-btn">All Red-Flags</a></li>
                 <li> <a href="all_interventions.html" class="menu-btn">All Interventions</a></li>
-                <li><a href="../index.html" class="menu-btn">Log Out</a></li>
+                <li><a onclick="logout();" class="menu-btn">Log Out</a></li>
 
             </ul>
 
@@ -36,7 +38,7 @@
                 <tbody id="tabledata">
 
                 </tbody>
-                
+
             </table>
             <div id="myModal" class="modal">
                 <div class="modal-content">
@@ -58,7 +60,8 @@
             </div>
         </div>
     </section>
-    <script src="../js/restrict.js"></script>
+
+    <script src="../js/logout.js"></script>
     <script src="../js/get_redflags.js"></script>
 </body>
 

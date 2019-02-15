@@ -6,6 +6,8 @@
     <title>Interventions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/redflag.css">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
                 <li> <a href="redflag.html">Red-Flags</a></li>
                 <li> <a href="intervention.html" id="active"> Interventions</a></li>
                 <li><a href="notifications.html">Notifications</a></li>
-                <li><a href="login.html">Log Out</a></li>
+                <li><a onclick="logout()">Log Out</a></li>
 
             </ul>
 
@@ -56,6 +58,7 @@
     </script>
     <script src="../js/user_inter.js"></script>
     <script src="../js/editint.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 
 </html>
