@@ -39,9 +39,11 @@ function redflags() {
             }
             else if (response.status === 401) {
                 document.getElementById('Red-Flags').innerHTML = `<p>${response.message}</p>`
+                window.location.href = 'login.html';
             }
 
-        });
+        })
+         
 
 
 }
@@ -72,13 +74,14 @@ function edit(incident_id) {
             .then((response) => response.json())
             .then(response => {
                 if (response.status === 200) {
-                    document.getElementById('error').style.display = 'none'
+                    document.getElementById('error').style.display = 'none';
                     modal.style.display = "none";
+                    window.location.reload('../templates/admin.html')
                 }
-                if (response.status === 400) {
+                else if (response.status === 400) {
                     document.getElementById('error').innerHTML = `${response.message}`
                 }
-                if (response.status === 401) {
+                else if (response.status === 401) {
                     document.getElementsByClassName('modal-content').innerHTML = `${response.message}`
 
                 }

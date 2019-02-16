@@ -18,14 +18,14 @@ function login() {
             console.log(response.status)
             if (response.status === 200) {
                 document.getElementById('error').style.display = 'none';
-                window.alert('succesfully logged in');
                 console.log(response.token)
                 localStorage.setItem("token", response.token);
                 if (document.getElementById("username").value === "admin") {
-                    document.getElementById('error').style.display = 'none';
+                    document.getElementById('message').innerHTML = `${response.message}`
                     window.location.href = 'admin.html';
                 }
                 else {
+                    document.getElementById('message').innerHTML = `${response.message}`
                     window.location.href = "profile.html"
                 }
 
@@ -38,7 +38,8 @@ function login() {
                 document.getElementById('error').innerHTML = `${response.message}`
             }
 
-        });
+        })
+        .catch(error => console.log(error));
 
 }
 
