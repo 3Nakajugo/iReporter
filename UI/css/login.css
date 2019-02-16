@@ -4,6 +4,9 @@ body{
 #error{
     color: red;
 }
+#message{
+    color: green;
+}
 ul.topnav li a {
     display: inline-block;
     color: #f2f2f2;

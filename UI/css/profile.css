@@ -64,7 +64,7 @@ h1{
 
 button{
     border : 2px solid #3C3E52;
-    background-color:rgba(121, 131, 223, 0.678);
+    background-color:rgba(8, 16, 90, 0.87);
     padding: 10px 5px;
     border-radius: 8px;
     width: 150px;
@@ -72,7 +72,8 @@ button{
     font-size: 18px;
     transition-duration: 0.25s;
     align-self: center;
-    margin-left: 4%;
+    margin-left: 7%;
+    margin-top: 10%;
     color: white;
 }
 h2{

@@ -33,6 +33,7 @@ function createIncident() {
                 document.getElementById("error").innerHTML = `${response.message}`
             }
         })
+        .catch((error) => console.log(error));
 
     }
     else if (incidentType === 'intervention') {
