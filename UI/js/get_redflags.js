@@ -2,7 +2,7 @@ let auth = localStorage.getItem("token")
 console.log(auth)
 redflags();// function call
 function redflags() {
-    fetch('http://127.0.0.1:5000/api/v2/redflags', {
+    fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function edit(incident_id) {
     let modal = document.getElementById('myModal');
     let btn = document.getElementById("edit-btn");
     let close = document.getElementsByClassName("close")[0];
-    let url = `http://127.0.0.1:5000/api/v2/redflags/${incident_id}/status`;
+    let url = `https://appireporter2.herokuapp.com/api/v2/redflags/${incident_id}/status`;
     modal.style.display = "block";
 
     document.getElementById('status-form').addEventListener('submit', change)

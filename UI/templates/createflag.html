@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Create Red-flag</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/createflag.css">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/restrict.js"></script>
@@ -36,12 +36,12 @@
                     </select>
                     <label>Comment</label><br>
                     <textarea name="" id="comment" cols="30" rows="10"></textarea>
-
-                    <label>Location</label><br>
-                    <input type="text" id="location" placeholder="cordinates" required> <br />
                     <label>Upload Image</label><br>
                     <input type="file" id="file" placeholder="Choose Video or Image"><br />
-                    <div id="mapid"></div>
+                    <label>Location</label><br>
+                    <input type="text" id="location" placeholder="cordinates" required> <br />
+                    <div id="info"></div>
+                    <div id="map"></div>
                     <div>
                         <input type="button" onclick="createIncident()" id="submit-btn" value="Submit">
                     </div>
@@ -51,6 +51,7 @@
 
     <script src="../js/create.js">    </script>
     <script src="../js/logout.js"></script>
+    <script src="../js/location.js"></script>
 
 </body>
 

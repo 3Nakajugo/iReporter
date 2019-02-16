@@ -12,7 +12,7 @@ function createIncident() {
     console.log(incident);
     if (incidentType === 'redflag') {
         //creates redflag
-        fetch('http://127.0.0.1:5000/api/v2/redflags', {
+        fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
             method: 'POST',
             body: JSON.stringify(incident),
             headers: {
@@ -33,11 +33,12 @@ function createIncident() {
                 document.getElementById("error").innerHTML = `${response.message}`
             }
         })
+        .catch((error) => console.log(error));
 
     }
     else if (incidentType === 'intervention') {
         //creates intervention
-        fetch('http://127.0.0.1:5000/api/v2/interventions', {
+        fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
             method: 'POST',
             body: JSON.stringify(incident),
             headers: {

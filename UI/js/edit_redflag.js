@@ -3,8 +3,8 @@ function edit(incident_id) {
     let modal = document.getElementById('myModal');
     let btn = document.getElementById("edit-btn");
     let close = document.getElementsByClassName("close")[0];
-    let location_url = `http://127.0.0.1:5000/api/v2/redflags/${incident_id}/location`;
-    let comment_url = `http://127.0.0.1:5000/api/v2/redflags/${incident_id}/comment`;
+    let location_url = `https://appireporter2.herokuapp.com/api/v2/redflags/${incident_id}/location`;
+    let comment_url = `https://appireporter2.herokuapp.com/api/v2/redflags/${incident_id}/comment`;
     modal.style.display = "block";
     document.getElementById('results').innerHTML = `
                  <h1>Edit Redflag</h1> 
