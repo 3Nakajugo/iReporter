@@ -14,5 +14,6 @@ var marker = new mapboxgl.Marker({
 map.addControl(new mapboxgl.NavigationControl());
 
 map.on('click', function (e) {
-        document.getElementById('location').value=(e.lngLat);
+
+    document.getElementById('location').value = (e.lngLat);
 });

@@ -64,7 +64,7 @@ function view(incident_id) {
             if (response.status === 200) {
                 console.log(response)
                 document.getElementById("results").innerHTML = `
-                <form>
+                <form id= "single-record">
                     <p>Id: ${response['data'][0].incident_id}</p>
                     <p>comment: ${response['data'][0].comment}</p>
                     <p>created By: ${response['data'][0].createdby}</p>
@@ -88,7 +88,7 @@ function view(incident_id) {
     }
 }
 
-function deleteTnt(incident_id) {
+function deleteInt(incident_id) {
     console.log(incident_id);
     let url = `https://appireporter2.herokuapp.com/api/v2/interventions/${incident_id}`;
     console.log(url)
