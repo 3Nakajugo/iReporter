@@ -20,12 +20,10 @@ function redflags() {
                     response["data"].forEach(redflag => {
                         document.getElementById('tabledata').innerHTML += ` <tr>
                         <td>${redflag.incident_id}</td>
-                        <td>${redflag.incident_type}</td>
                         <td>${redflag.date}</td>
                         <td>${redflag.createdby}</td>
                         <td>${redflag.location}</td>
                         <td>${redflag.status}</td>
-                        <td>${redflag.file}</td>
                         <td>${redflag.comment}</td>
                         <td><input type="submit" id="edit-btn" onclick="edit(${redflag.incident_id})" class="btn" value="edit status"/></td>
                         </tr>
