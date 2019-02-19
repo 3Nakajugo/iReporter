@@ -93,6 +93,3 @@ function edit(incident_id) {
 
 }
 
-
-
-
