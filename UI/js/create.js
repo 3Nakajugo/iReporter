@@ -61,7 +61,7 @@ uploadFile.addEventListener('change', function (event) {
             }
             else if (incidentType === 'intervention') {
                 //creates intervention
-                fetch('https://appirepr2.herokuapp.com/api/v2/interventions', {
+                fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
                     method: 'POST',
                     body: JSON.stringify(incident),
                     headers: {
