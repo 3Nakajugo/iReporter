@@ -17,6 +17,7 @@ function edit(incident_id) {
                     <input type="text"  id="update"  />
                     <input type="submit" class="btn" value="save" />
                 </form>
+                <div id="map"></div>
                 `
     document.getElementById('status-form').addEventListener('submit', change)
     function change(e) {

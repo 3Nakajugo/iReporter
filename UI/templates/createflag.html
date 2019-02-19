@@ -23,11 +23,13 @@
                 <li><a href="notifications.html">Notifications</a></li>
                 <li><a onclick="logout()">Log Out</a></li>
             </ul>
-            <div class="form-redflag">
-                <form action="redflag.html">
+            <div class="form-redflag" method="POST" action="#">
+                <form enctype="multipart/form-data">
                     <br>
                     <div>
-                        <p id="error"></p>
+                        <p id="message1"></p>
+                        <p id="error1"></p>
+
                     </div>
                     <select id="select">
                         <option value="incident">Select Incident Type</option>
@@ -37,19 +39,19 @@
                     <label>Comment</label><br>
                     <textarea name="" id="comment" cols="30" rows="10"></textarea>
                     <label>Upload Image</label><br>
-                    <input type="file" id="file" placeholder="Choose Video or Image"><br />
+                    <input type="file" id="file" placeholder="Choose an Image"><br />
                     <label>Location</label><br>
                     <input type="text" id="location" placeholder="cordinates" required> <br />
-                    <div id="info"></div>
                     <div id="map"></div>
                     <div>
-                        <input type="button" onclick="createIncident()" id="submit-btn" value="Submit">
+                        <input type="button" id="create-btn" value="Submit">
                     </div>
                 </form>
             </div>
     </section>
 
-    <script src="../js/create.js">    </script>
+    <script src="../js/create.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/logout.js"></script>
     <script src="../js/location.js"></script>
 
