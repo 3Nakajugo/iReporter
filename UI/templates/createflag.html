@@ -5,8 +5,12 @@
     <meta charset="utf-8">
     <title>Create Red-flag</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/createflag.css">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -17,43 +21,40 @@
                 <li> <a href="redflag.html">Red-Flags</a></li>
                 <li> <a href="intervention.html"> Interventions</a></li>
                 <li><a href="notifications.html">Notifications</a></li>
-                <li><a href="../index.html">Log Out</a></li>
-
+                <li><a onclick="logout()">Log Out</a></li>
             </ul>
-            <div class="form-redflag">
-                <form action="redflag.html">
-                    <label>Description</label><br>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="form-redflag" method="POST" action="#">
+                <form enctype="multipart/form-data">
+                    <br>
+                    <div>
+                        <p id="message1"></p>
+                        <p id="error1"></p>
 
-                    <label>Location</label><br>
-                    <input type="text" placeholder="Longitude" required> <input type="text" placeholder="Latitude"
-                        required><br />
-                    <label>Upload Video or Image</label><br>
-                    <input type="file" placeholder="Choose Video or Image"><br />
-                    <label>Date</label> <br>
-                    <input type="Date" required> <br>
-
-
-                    <select>
+                    </div>
+                    <select id="select">
                         <option value="incident">Select Incident Type</option>
                         <option value="redflag">Redflag</option>
                         <option value="intervention">Intervention</option>
                     </select>
-
-                    <br>
-
+                    <label>Comment</label><br>
+                    <textarea name="" id="comment" cols="30" rows="10"></textarea>
+                    <label>Upload Image</label><br>
+                    <input type="file" id="file" placeholder="Choose an Image"><br />
+                    <label>Location</label><br>
+                    <input type="text" id="location" placeholder="cordinates" required> <br />
+                    <div id="map"></div>
                     <div>
-                        <input type="submit" id="submit-btn" value="Submit" onclick="conf()">
+                        <input type="button" id="create-btn" value="Submit">
                     </div>
                 </form>
             </div>
     </section>
 
-    <script>
-        function conf() {
-            var con = confirm("Do you want to submit for sure?");
-        }
-    </script>
+    <script src="../js/create.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/location.js"></script>
+
 </body>
 
 </html>

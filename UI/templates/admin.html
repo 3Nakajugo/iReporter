@@ -6,6 +6,8 @@
     <title>Admin Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/admin.css ">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
             <ul class="topnav" id="myTopnav">
                 <li> <a href="admin.html" id="active" class="menu-btn">All Red-Flags</a></li>
                 <li> <a href="all_interventions.html" class="menu-btn">All Interventions</a></li>
-                <li><a href="../index.html" class="menu-btn">Log Out</a></li>
+                <li><a onclick="logout();" class="menu-btn">Log Out</a></li>
 
             </ul>
 
@@ -23,79 +25,44 @@
             <h1>Red-Flags</h1>
             <table class="table1" id="Red-Flags">
                 <tr>
-                    <th>Red-Flag</th>
-                    <th>Status</th>
-                    <th>Created On</th>
-                    <th>Created By</th>
+                    <th>Id</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>CreatedBy</th>
+                    <th>Location</th>
+                    <th>status</th>
+                    <th>File</th>
+                    <th>Comment</th>
+                    <th>Button</th>
                 </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>
-                        <form>
-                            <input list="status" name="" placeholder="draft">
-                            <datalist id="status">
-                                <option value="Rejected">
-                                <option value="Resolved">
-                                <option value="Under Investigation">
-                            </datalist>
-                        </form>
-                    </td>
-                    <td>1/08/2005</td>
-                    <td>
-                        Edna
-                    </td>
-                </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>
-                        <form>
-                            <input list="status" name="" placeholder="draft">
-                            <datalist id="status">
-                                <option value="Rejected">
-                                <option value="Resolved">
-                                <option value="Under Investigation">
-                            </datalist>
-                        </form>
-                    </td>
-                    <td>1/08/2005</td>
-                    <td>Candy</td>
-                </tr>
-                <tr>
-                    <td>chief justice recieves bribe of 20 million</td>
-                    <td>
-                        <form>
-                            <input list="status" name="" placeholder="draft">
-                            <datalist id="status">
-                                <option value="Rejected">
-                                <option value="Resolved">
-                                <option value="Under Investigation">
-                            </datalist>
-                        </form>
-                    </td>
-                    <td>1/08/2005</td>
-                    <td>Masete</td>
-                </tr>
-                <tr>
-                    <td>Embezzelment</td>
-                    <td>
-                        <form>
-                            <input list="status" name="" placeholder="draft">
-                            <datalist id="status">
-                                <option value="Rejected">
-                                <option value="Resolved">
-                                <option value="Under Investigation">
-                            </datalist>
-                        </form>
-                    </td>
-                    <td>1/08/2005</td>
-                    <td>Emma</td>
-                </tr>
+                <tbody id="tabledata">
+
+                </tbody>
+
             </table>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Update status</h1>
+                    <form id="status-form">
+                        <p id="error"></p>
+                        <select id="select">
+                            <option value="status">Select status</option>
+                            <option value="rejected">rejected</option>
+                            <option value="under investigation">under inviestigation</option>
+                            <option value="resolved">resolved</option>
+                            <br>
+                            <input type="submit" class="btn" value="save" />
+                    </form>
+
+                </div>
+
+            </div>
         </div>
     </section>
 
-
-    <script src="" async defer></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/get_redflags.js"></script>
 </body>
 
 </html>

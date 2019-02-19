@@ -12,7 +12,7 @@
 
 <body>
     <section id='main-container'>
-        <div class="logo"></div>
+        <div class="logo"></div> 
         <div class="header-menu">
             <ul class="topnav" id="myTopnav">
                 <li><a href="../index.html">Home</a></li>
@@ -24,21 +24,33 @@
             <div class="heading">
                 <p>All feilds must be filled</p>
             </div>
-            <form action="../index.html" autocomplete="on" class="login-form">
-                <div class="login-input">
-                    <input type="text" placeholder="Username" required>
+            <form autocomplete="on" class="login-form" onsubmit="return false">
+                <div class="heading">
+                    <p id="error"></p>
                 </div>
                 <div class="login-input">
-                    <input type="email" placeholder="3dna@gmail.com" required>
+                    <input type="text" placeholder="Firstname" id="firstname" required>
                 </div>
                 <div class="login-input">
-                    <input type="password" placeholder="Password" name="" required>
+                    <input type="text" placeholder="Lastname" id="lastname" required>
                 </div>
                 <div class="login-input">
-                    <input type="password" placeholder="Comfirm Password" name="" required>
+                    <input type="text" placeholder="Telephone" id="telephone" required>
                 </div>
                 <div class="login-input">
-                    <input type="submit" name="" value="Create">
+                    <input type="text" placeholder="Username" id="username" required>
+                </div>
+                <div class="login-input">
+                    <input type="email" placeholder="3dna@gmail.com" id="email" required>
+                </div>
+                <div class="login-input">
+                    <input type="password" placeholder="Password" id="password" required>
+                </div>
+                <div class="login-input">
+                    <input type="password" placeholder="Confirm Password" id="confirmpass" required>
+                </div>
+                <div class="login-input">
+                    <input type="submit" onclick="signup()" name="" value="Create">
                 </div>
                 <p><small><a href="../index.html">Back home</a></small></p>
             </form>
@@ -48,7 +60,7 @@
     </section>
 
 
-    <script></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>
