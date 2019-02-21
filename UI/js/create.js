@@ -48,6 +48,7 @@ uploadFile.addEventListener('change', function (event) {
                         if (response.status === 201) {
                             document.getElementById("error1").style.display = 'none';
                             document.getElementById("message1").innerHTML = `${response.message}`;
+                            window.location.href = 'redflag.html'
                         }
                         else if (response.status === 400) {
                             document.getElementById("error1").innerHTML = `${response.message}`
@@ -76,6 +77,7 @@ uploadFile.addEventListener('change', function (event) {
                         if (response.status === 201) {
                             document.getElementById("error1").style.display = 'none';
                             document.getElementById("message1").innerHTML = `${response.message}`;
+                            window.location.href = 'intervention.html'
                         }
                         else if (response.status === 400) {
                             document.getElementById("error1").innerHTML = `${response.message}`

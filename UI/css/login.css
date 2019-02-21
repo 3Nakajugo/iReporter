@@ -2,6 +2,7 @@ body{
     background-color: #eeeeee; 
 }
 #error{
+    display: none;
     color: red;
 }
 #message{
