@@ -11,9 +11,17 @@ var marker = new mapboxgl.Marker({
     .setLngLat([0, 0])
     .addTo(map);
 
-map.addControl(new mapboxgl.NavigationControl());
 
-map.on('click', function (e) {
-
-    document.getElementById('location').value = (e.lngLat);
+var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken
 });
+
+map.addControl(geocoder);
+map.addControl(new mapboxgl.NavigationControl());
+geocoder.on('result', function (ev) {
+            var r = ev.result.place_name;
+            document.getElementById('location').value = (r);
+        });
+
+
+

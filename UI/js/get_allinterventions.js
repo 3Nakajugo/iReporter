@@ -11,7 +11,6 @@ function redflags() {
     })
         .then((response) => response.json())
         .then((response) => {
-            // let response_data = response;
             console.log(response)
             if (response.status === 200) {
                 if (response["message"] === "all interventions") {
