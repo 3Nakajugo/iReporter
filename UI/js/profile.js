@@ -6,7 +6,7 @@ function info() {
     let underInvestigation = 0
     let draft = 0
 
-    fetch('http://127.0.0.1:5000/api/v2/interventions', {
+    fetch('https://appireporter2.herokuapp.com/v2/interventions', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function info() {
 
             })
         })
-        fetch('http://127.0.0.1:5000/api/v2/redflags', {
+        fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
