@@ -1,5 +1,4 @@
 let auth = localStorage.getItem("token")
-console.log(auth)
 redflags();// function call
 function redflags() {
     fetch('https://appireporter2.herokuapp.com/api/v2/redflags', {
@@ -62,7 +61,6 @@ function view(incident_id) {
         .then((response) => response.json())
         .then(response => {
             if (response.status === 200) {
-                console.log(response)
                 document.getElementById("results").innerHTML = `
                 <form id= "single-record">
                     <p>Id: ${response['data'].incident_id}</p>

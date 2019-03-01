@@ -14,7 +14,7 @@ function edit(incident_id) {
                             <option value="status">Select</option>
                             <option value="location">location</option>
                             <option value="comment">comment</option>
-                    <input type="text"  id="update"  />
+                    <input type="text"  id="update" />
                     <input type="submit" class="btn" value="save" />
                 </form>
                 `
