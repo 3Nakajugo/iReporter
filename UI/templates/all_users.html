@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>All users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/admin.css ">
+    <script src="../js/restrict.js"></script>
+    <script>LoggedIn();</script>
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <div class="menu">
+            <ul class="topnav" id="myTopnav">
+                <li> <a href="admin.html" class="menu-btn">Red-Flags</a></li>
+                <li> <a href="all_interventions.html" class="menu-btn">Interventions</a></li>
+                <li> <a href="all_users.html" id="active" class="menu-btn">Users</a></li>
+                <li><a onclick="logout();" class="menu-btn">Log Out</a></li>
+
+            </ul>
+
+        </div>
+        <div>
+            <h1>Interventions</h1>
+            <table class="table1" id="user-table">
+                <tr>
+                    <th>Username</th>
+                    <th>Date Registered</th>
+                    <th>Admin</th>
+                </tr>
+                <tbody id="tabledata">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="../js/logout.js"></script>
+    <script src="../js/all_users.js"></script>
+</body>
+
+</html>
