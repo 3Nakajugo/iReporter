@@ -6,7 +6,7 @@ function info() {
     let underInvestigation = 0
     let draft = 0
 
-    fetch('https://appireporter2.herokuapp.com/v2/interventions', {
+    fetch('https://appireporter2.herokuapp.com/api/v2/interventions', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
